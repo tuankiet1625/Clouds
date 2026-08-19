@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefWidth="542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.ImageItemController">
+   <children>
+      <HBox fx:id="h_sender" layoutX="178.0" maxWidth="357.0" minWidth="357.0" prefWidth="357.0" spacing="15.0" style="-fx-alignment: center_right;">
+         <children>
+            <Rectangle fx:id="img_sender" arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="100.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="100.0" />
+         </children>
+      </HBox>
+      <HBox fx:id="h_receive" layoutX="14.0" prefWidth="357.0" spacing="15.0" visible="false">
+         <children>
+            <Rectangle fx:id="avata" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+            <AnchorPane>
+               <children>
+                  <Rectangle fx:id="img_receive" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="73.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="152.0" />
+               </children>
+            </AnchorPane>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

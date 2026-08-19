@@ -1,0 +1,63 @@
+
+.button_code{
+	-fx-background-color :white ;
+	-fx-font-size: 15 ;
+	-fx-background-radius: 3px ;
+	-fx-max-width: 40px ;
+	-fx-max-height: 40px ;
+	-fx-min-width: 40px ;
+    -fx-min-height: 37px ;
+    -fx-background-insert: 0px ;
+}
+
+.button_code:hover{
+	-fx-cursor: hand;
+	-fx-background-insert: 0px ;
+}
+
+.notification_email{
+	-fx-text-alignment: center;
+	-fx-font-size: 15;
+}
+
+.button_confirm{
+	-fx-background-color: #3cb371 ;
+	-fx-background-radius : 3px ;
+	-fx-text-fill: white ;
+}
+
+.button_confirm:hover{
+	-fx-background-color: #32cd32 ;
+	-fx-background-radius : 3px ;
+	-fx-text-fill: black;
+	-fx-cursor: hand;
+}
+
+.button_close{
+	-fx-background-color: transparent ;
+	-fx-min-width: 25px;
+    -fx-min-height: 25px;
+    -fx-max-width: 25px;
+    -fx-max-height: 25px;
+}
+
+.button_close:hover{
+	-fx-background-color: transparent ;
+    -fx-min-width: 25px;
+    -fx-min-height: 25px;
+    -fx-max-width: 25px;
+    -fx-max-height: 25px;
+	-fx-cursor: hand;
+}
+
+.timeline {
+    -fx-alignment: center;
+    -fx-text-fill : red ;
+}
+
+
+.anchorpane{
+	-fx-background-radius: 7px;
+	-fx-background-color: linear-gradient(to bottom right,  #6495ed, #87cefa);
+}
+

@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="160.0" prefWidth="750.0" style="-fx-background-radius: 7px; -fx-background-color: #f5f5f5;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.ProjectItemController">
+   <children>
+      <Label fx:id="position" layoutX="587.0" layoutY="12.0" prefHeight="27.0" prefWidth="150.0" style="-fx-alignment: center; -fx-font-weight: bold; -fx-background-color: #d3d3d3; -fx-background-radius: 3px;" text="Manager">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <VBox layoutX="20.0" layoutY="61.0" prefWidth="284.0" spacing="7.0">
+         <children>
+            <HBox prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center_left;">
+                     <children>
+                        <Label prefHeight="17.0" style="-fx-font-weight: bold;" text="Start date">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center_left;">
+                     <children>
+                        <Label prefHeight="17.0" style="-fx-font-weight: bold;" text="End date">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center_left;">
+                     <children>
+                        <Label prefHeight="17.0" style="-fx-font-weight: bold;" text="Status">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <HBox prefHeight="20.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center; -fx-background-color: #6495ed; -fx-background-radius: 3px;">
+                     <children>
+                        <Label fx:id="start_date" prefHeight="33.0" prefWidth="85.0" style="-fx-text-fill: #0000ff;" text="  12/3/2024" textFill="#0091a4">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center; -fx-background-color: rgb(255, 0, 0, 0.3); -fx-background-radius: 3px;">
+                     <children>
+                        <Label fx:id="end_date" prefHeight="30.0" prefWidth="85.0" text="  12/5/2024" textFill="#bc080e">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="20.0" prefWidth="85.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="status2" prefHeight="17.0" prefWidth="114.0" text="  Normal" textFill="#008048">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox layoutX="20.0" layoutY="120.0" prefHeight="40.0" prefWidth="730.0" spacing="10.0" styleClass="hbox_infor" stylesheets="@../css/ProjectInterface.css">
+         <children>
+            <HBox prefHeight="38.0" prefWidth="556.0" spacing="70.0" stylesheets="@../css/ProjectInterface.css">
+               <children>
+                  <HBox prefHeight="40.0" prefWidth="100.0" spacing="10.0" styleClass="hbox_parameter" stylesheets="@../css/ProjectInterface.css">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/ProjectItem/Member.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="38.0" prefWidth="58.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="77.0" style="-fx-alignment: center_left;" text="Members">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="member_cnt" prefHeight="16.0" prefWidth="71.0" text="20">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="100.0" spacing="10.0" styleClass="hbox_parameter" stylesheets="@../css/ProjectInterface.css">
+                     <children>
+                        <ImageView fitHeight="25.0" fitWidth="25.0">
+                           <image>
+                              <Image url="@../images/ProjectItem/Task.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="48.0" prefWidth="50.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="50.0" style="-fx-alignment: center_left;" text="Task">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+      
+                              <Label fx:id="task_cnt" prefHeight="16.0" prefWidth="71.0" text="20">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="40.0" prefWidth="134.0" spacing="10.0" styleClass="hbox_parameter" stylesheets="@../css/ProjectInterface.css">
+                     <children>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/ProjectItem/Budget.png" />
+                           </image>
+                        </ImageView>
+                        <VBox prefHeight="48.0" prefWidth="110.0" style="-fx-alignment: center;">
+                           <children>
+                              <Label prefHeight="17.0" prefWidth="110.0" style="-fx-alignment: center_left;" text="Budget">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="budget" prefWidth="110.0" style="-fx-alignment: center_left;" text="20000000.0">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+            <VBox prefHeight="38.0" prefWidth="150.0" style="-fx-alignment: center_right;">
+               <children>
+                  <HBox maxWidth="70.0" minWidth="70.0" prefHeight="28.0" prefWidth="70.0" spacing="10.0" style="-fx-background-insets: 0px;">
+                     <children>
+                        <Button minHeight="28.0" minWidth="30.0" mnemonicParsing="false" onAction="#detailProject" prefHeight="27.0" prefWidth="27.0" style="-fx-background-color: #6495ed; -fx-background-radius: 5px; -fx-background-insets: 0px;">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/ProjectItem/Detail.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="btn_delete" maxHeight="20.0" maxWidth="20.0" minHeight="28.0" minWidth="30.0" mnemonicParsing="false" onAction="#deleteProject" prefHeight="30.0" prefWidth="50.0" style="-fx-background-color: transparent;">
+                           <graphic>
+                              <ImageView fitHeight="28.0" fitWidth="30.0">
+                                 <image>
+                                    <Image url="@../images/ProjectItem/Delete.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children></VBox>
+         </children>
+      </HBox>
+      <Label layoutX="20.0" layoutY="38.0" text="Manager:">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <Label fx:id="manager" layoutX="83.0" layoutY="38.0" text="Nguyễn Văn Triều">
+         <font>
+            <Font name="Arial" size="13.0" />
+         </font>
+      </Label>
+      <HBox layoutX="20.0" layoutY="12.0" prefHeight="23.0" prefWidth="420.0" spacing="15.0">
+         <children>
+            <Label fx:id="name_project" maxWidth="200.0" prefHeight="23.0" text="Cấu trúc dữ liệu và giải thuật">
+               <font>
+                  <Font name="Arial" size="17.0" />
+               </font>
+            </Label>
+            <HBox prefHeight="17.0" prefWidth="173.0" spacing="10.0">
+               <children>
+                  <VBox prefHeight="17.0" prefWidth="10.0" style="-fx-alignment: center;">
+                     <children>
+                        <Circle fx:id="status_circle" fill="WHITE" radius="5.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" />
+                     </children>
+                  </VBox>
+                  <Label fx:id="status" prefHeight="33.0" prefWidth="130.0" text="In Progress">
+                     <font>
+                        <Font name="Arial" size="13.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

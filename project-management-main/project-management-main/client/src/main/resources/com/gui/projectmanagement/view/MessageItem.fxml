@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefWidth="542.0" style="-fx-background-color: white;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.MessageItemController">
+   <children>
+      <AnchorPane fx:id="a_receive" layoutX="14.0" prefWidth="357.0" visible="false">
+         <children>
+            <Rectangle fx:id="avata" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="35.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" width="35.0" />
+            <HBox layoutX="50.0" minHeight="35.0" style="-fx-padding: 7px; -fx-background-color: gray; -fx-background-radius: 7px; -fx-alignment: center;">
+               <children>
+                  <Label fx:id="message_receive" maxWidth="293.0" style="-fx-alignment: center;" textFill="WHITE" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <HBox fx:id="h_sender" layoutX="178.0" prefWidth="357.0" spacing="15.0" style="-fx-alignment: center_right;" visible="false">
+         <children>
+            <HBox prefWidth="307.0" style="-fx-alignment: top_right;">
+               <children>
+                  <HBox minHeight="35.0" style="-fx-padding: 7px; -fx-background-color: #6495ed; -fx-background-radius: 7px; -fx-alignment: center;">
+                     <children>
+                        <Label fx:id="message_sender" maxWidth="293.0" style="-fx-alignment: center;" textFill="WHITE" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

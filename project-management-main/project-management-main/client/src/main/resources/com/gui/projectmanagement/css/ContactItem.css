@@ -1,0 +1,33 @@
+.button_message {
+    -fx-background-color: transparent ;
+}
+
+.button_message:hover {
+    -fx-background-color: #dcdcdc ;
+    -fx-background-radius: 3px ;
+    -fx-cursor: hand ;
+}
+
+.button_accept {
+    -fx-background-color: #6495ed ;
+    -fx-background-radius: 3px;
+}
+
+.button_accept:hover {
+    -fx-background-color: #0000ff ;
+    -fx-text-fill: white ;
+    -fx-background-radius: 3px;
+    -fx-cursor: hand ;
+}
+
+.button_delete {
+    -fx-background-color: #dcdcdc ;
+    -fx-background-radius: 3px;
+}
+
+.button_delete:hover {
+    -fx-background-color: #d3d3d3 ;
+    -fx-background-radius: 3px;
+    -fx-cursor: hand;
+
+}

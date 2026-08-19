@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="0.0" prefWidth="213.0" style="-fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.TaskItemController">
+   <children>
+      <ImageView fitHeight="20.0" fitWidth="20.0" layoutX="14.0" layoutY="1.0">
+         <image>
+            <Image url="@../images/TaskItem/Folder.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="name_task" layoutX="40.0" layoutY="2.0" prefHeight="17.0" text="Cấu trúc dữ liệu và giải thuật">
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

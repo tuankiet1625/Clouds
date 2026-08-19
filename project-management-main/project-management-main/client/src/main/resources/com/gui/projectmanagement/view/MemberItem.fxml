@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="50.0" prefWidth="500.0" style="-fx-background-radius: 3px; -fx-background-color: transparent;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.MemberItemController">
+   <children>
+      <Label fx:id="fullname" layoutX="55.0" layoutY="17.0" prefHeight="17.0" prefWidth="200.0">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Label fx:id="role" layoutX="320.0" layoutY="17.0" prefHeight="17.0" prefWidth="158.0" style="-fx-alignment: center_right;" text="Manager">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+      <Rectangle fx:id="avata" arcHeight="10.0" arcWidth="10.0" fill="LIGHTGRAY" height="30.0" layoutX="14.0" layoutY="11.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="30.0" />
+   </children>
+</AnchorPane>

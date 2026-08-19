@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="60.0" prefWidth="542.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.FileItemController">
+   <children>
+      <AnchorPane fx:id="a_sender" layoutX="285.0" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: rgb(0, 0, 0, 0.75); -fx-background-radius: 7px;" visible="false">
+         <children>
+            <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="188.0" layoutY="10.0">
+               <image>
+                  <Image url="@../images/InterfaceClient/File4.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="file_name_sender" layoutX="14.0" layoutY="11.0" maxWidth="150.0" prefHeight="17.0" text="NameFile.txt" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Label fx:id="file_size_sender" layoutX="14.0" layoutY="33.0" text="20Kb" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="13.0" />
+               </font>
+            </Label>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+      <AnchorPane fx:id="a_receive" layoutX="14.0" prefHeight="60.0" prefWidth="330.0">
+         <children>
+            <Rectangle fx:id="avata" arcHeight="10.0" arcWidth="10.0" fill="LIGHTGRAY" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="35.0" />
+            <AnchorPane fx:id="a_file_receive" layoutX="50.0" prefHeight="60.0" prefWidth="250.0" style="-fx-background-color: rgb(0, 0, 0, 0.75); -fx-background-radius: 7px;">
+               <children>
+                  <ImageView fitHeight="40.0" fitWidth="40.0" layoutX="14.0" layoutY="10.0">
+                     <image>
+                        <Image url="@../images/InterfaceClient/File4.png" />
+                     </image>
+                  </ImageView>
+                  <Label fx:id="file_name_receive" layoutX="96.0" layoutY="12.0" maxWidth="140.0" prefHeight="17.0" prefWidth="140.0" style="-fx-alignment: center_right;" text="NameFile.txt" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="file_size_receive" layoutX="96.0" layoutY="34.0" maxWidth="140.0" prefHeight="15.0" prefWidth="140.0" style="-fx-alignment: center_right;" text="20Kb" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </children>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </AnchorPane>
+   </children>
+</AnchorPane>

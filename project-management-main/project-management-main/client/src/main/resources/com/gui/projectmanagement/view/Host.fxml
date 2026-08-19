@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="120.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.HostController">
+   <children>
+      <TextField fx:id="host" layoutX="35.0" layoutY="30.0" prefHeight="25.0" promptText="Host" style="-fx-font-family: Arial; -fx-background-color: #d3d3d3;" text="localhost" />
+      <TextField fx:id="port" layoutX="196.0" layoutY="30.0" prefHeight="25.0" prefWidth="69.0" promptText="Port" style="-fx-font-family: Arial; -fx-background-color: #d3d3d3;" text="1102" />
+      <Button layoutX="35.0" layoutY="65.0" mnemonicParsing="false" onAction="#finish" prefHeight="25.0" prefWidth="70.0" style="-fx-background-color: #d3d3d3; -fx-background-insets: 0px;" text="Connect">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+         <font>
+            <Font name="Arial" size="12.0" />
+         </font></Button>
+   </children>
+</AnchorPane>

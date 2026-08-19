@@ -1,0 +1,7 @@
+.hbox_infor{
+    -fx-border-color: #808080 transparent transparent transparent ;
+}
+
+.hbox_parameter{
+    -fx-alignment: center;
+}

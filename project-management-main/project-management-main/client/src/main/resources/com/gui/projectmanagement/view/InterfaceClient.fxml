@@ -1,0 +1,1203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.ProgressBar?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="anchorpane_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-radius: 7px; -fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.InterfaceClientController">
+   <children>
+      <AnchorPane fx:id="anchorpane_main" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="1100.0" style="-fx-background-radius: 7px; -fx-background-color: transparent;">
+         <children>
+            <AnchorPane maxHeight="30.0" maxWidth="750.0" minHeight="40.0" minWidth="1100.0" prefHeight="30.0" prefWidth="750.0" style="-fx-background-color: #0700e1; -fx-background-radius: 7px 7px 0 0;" styleClass="anchorpane_top" stylesheets="@../css/InterfaceClient.css">
+               <children>
+                  <HBox layoutX="1010.0" prefHeight="38.0" prefWidth="90.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#minimize" styleClass="button_minimize" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="17.0" fitWidth="17.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/Minimize.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button mnemonicParsing="false" onAction="#close" styleClass="button_close" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="17.0" fitWidth="17.0">
+                                 <image>
+                                    <Image url="@../images/NewProject/CloseWindow.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="icon_img" arcHeight="10.0" arcWidth="10.0" fill="WHITE" height="40.0" layoutX="849.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="37.0" />
+                  <Label fx:id="temperature" layoutX="894.0" layoutY="12.0" style="-fx-font-weight: bold;" text="27 °C" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="city" layoutX="755.0" layoutY="12.0" prefHeight="17.0" prefWidth="80.0" style="-fx-alignment: center_right; -fx-font-weight: bold;" text="Đà Nẵng" textFill="WHITE">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane layoutY="40.0" minHeight="50.0" prefHeight="50.0" prefWidth="1100.0" styleClass="anchorpane_top_2" stylesheets="@../css/InterfaceClient.css">
+               <children>
+                  <HBox layoutX="950.0" layoutY="10.0" prefHeight="30.0" prefWidth="75.0" spacing="15.0">
+                     <children>
+                        <Button fx:id="btn_setting" mnemonicParsing="false" styleClass="button_top_right" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/Settings.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="notification" mnemonicParsing="false" onAction="#openNotification" styleClass="button_top_right" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="20.0" fitWidth="20.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/Notification.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <HBox layoutX="14.0" layoutY="6.0" prefHeight="37.0" prefWidth="200.0" spacing="10.0">
+                     <children>
+                        <Button fx:id="project" mnemonicParsing="false" onAction="#openProject" prefHeight="66.0" prefWidth="76.0" style="-fx-border-color: transparent transparent #808080 transparent; -fx-border-width: 3px;" styleClass="button_top_left" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="12.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/Project.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="messenger" mnemonicParsing="false" onAction="#openMessenger" prefHeight="66.0" prefWidth="76.0" styleClass="button_top_left" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="27.0" fitWidth="30.0" layoutX="12.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/Chat.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Rectangle fx:id="avata_user" arcHeight="10.0" arcWidth="10.0" fill="LIGHTGRAY" height="32.0" layoutX="1045.0" layoutY="9.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="32.0">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Rectangle>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_project" layoutY="90.0" prefHeight="510.0" prefWidth="1100.0" styleClass="anchorpane_center" stylesheets="@../css/InterfaceClient.css">
+               <children>
+                  <VBox layoutX="30.0" layoutY="20.0" prefHeight="470.0" prefWidth="1040.0" spacing="15.0">
+                     <children>
+                        <HBox prefHeight="470.0" prefWidth="1020.0" spacing="15.0">
+                           <children>
+                              <AnchorPane prefHeight="460.0" prefWidth="250.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px;">
+                                 <children>
+                                    <VBox layoutX="20.0" layoutY="110.0" prefHeight="300.0" prefWidth="210.0">
+                                       <children>
+                                          <VBox prefHeight="284.0" prefWidth="188.0">
+                                             <children>
+                                                <HBox fx:id="hbox_total" prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_total" prefHeight="21.0" prefWidth="228.0" style="-fx-background-color: #dcdcdc;" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_total" mnemonicParsing="false" prefHeight="47.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="Total">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="total" prefHeight="58.0" prefWidth="38.0" style="-fx-alignment: center;" text="0">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_in_progress" prefHeight="50.0" prefWidth="660.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_in_progress" mnemonicParsing="false" prefHeight="62.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="In Progress">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="in_progress" prefHeight="66.0" prefWidth="38.0" style="-fx-alignment: center;" text="0">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_cancelled" prefHeight="50.0" prefWidth="660.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_cancelled" mnemonicParsing="false" prefHeight="68.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="Cancelled">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="cancelled" prefHeight="48.0" prefWidth="39.0" style="-fx-alignment: center;" text="1">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_pause" prefHeight="50.0" prefWidth="660.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_pause" mnemonicParsing="false" prefHeight="64.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="Pause">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="pause" prefHeight="48.0" prefWidth="39.0" style="-fx-alignment: center;" text="2">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_complete" prefHeight="50.0" prefWidth="660.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_complete" mnemonicParsing="false" prefHeight="71.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="Complete">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="complete" prefHeight="48.0" prefWidth="39.0" style="-fx-alignment: center;" text="3">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_on_hold" prefHeight="21.0" prefWidth="228.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_on_hold" mnemonicParsing="false" prefHeight="65.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="On Hold">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="on_hold" prefHeight="61.0" prefWidth="38.0" style="-fx-alignment: center;" text="0">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                                <HBox prefHeight="40.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <HBox fx:id="hbox_delay" prefHeight="21.0" prefWidth="228.0" styleClass="hbox_project_status" stylesheets="@../css/InterfaceClient.css">
+                                                         <children>
+                                                            <Button fx:id="btn_delay" mnemonicParsing="false" prefHeight="61.0" prefWidth="173.0" styleClass="button_left" stylesheets="@../css/InterfaceClient.css" text="Delay">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Button>
+                                                            <Label fx:id="delay" prefHeight="61.0" prefWidth="38.0" style="-fx-alignment: center;" text="0" textFill="RED">
+                                                               <font>
+                                                                  <Font name="Arial" size="13.0" />
+                                                               </font>
+                                                            </Label>
+                                                         </children>
+                                                      </HBox>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </VBox>
+                                       </children>
+                                    </VBox>
+                                    <Label layoutX="20.0" layoutY="14.0" prefHeight="30.0" text="Project List">
+                                       <font>
+                                          <Font name="Arial" size="18.0" />
+                                       </font>
+                                    </Label>
+                                    <TextField fx:id="tf_search" layoutX="20.0" layoutY="57.0" prefHeight="31.0" prefWidth="210.0" promptText="Search" styleClass="text_field_search" stylesheets="@../css/InterfaceClient.css">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button layoutX="200.0" layoutY="14.0" minHeight="30.0" minWidth="30.0" mnemonicParsing="false" onAction="#newProject" prefHeight="30.0" prefWidth="30.0" styleClass="button_create" stylesheets="@../css/InterfaceClient.css">
+                                       <font>
+                                          <Font name="Arial" size="13.0" />
+                                       </font>
+                                       <graphic>
+                                          <ImageView fitHeight="23.0" fitWidth="23.0">
+                                             <image>
+                                                <Image url="@../images/InterfaceClient/NewProject.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </AnchorPane>
+                              <ListView fx:id="list_project" prefHeight="415.0" prefWidth="775.0" style="-fx-background-radius: 3px;" styleClass="list_project" stylesheets="@../css/InterfaceClient.css" />
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_messenger" layoutY="90.0" minHeight="510.0" minWidth="1100.0" prefHeight="510.0" prefWidth="1100.0" styleClass="anchorpane_center" stylesheets="@../css/InterfaceClient.css" visible="false">
+               <children>
+                  <AnchorPane prefHeight="510.0" prefWidth="275.0" style="-fx-border-color: transparent #808080 transparent transparent;">
+                     <children>
+                        <ListView fx:id="list_interactor" layoutX="23.0" layoutY="100.0" prefHeight="375.0" prefWidth="230.0" styleClass="list_interactor" stylesheets="@../css/InterfaceClient.css" />
+                        <TextField fx:id="search_interactor" layoutX="23.0" layoutY="50.0" prefHeight="30.0" prefWidth="230.0" promptText="Search" style="-fx-background-color: #dcdcdc; -fx-background-radius: 5px;">
+                           <font>
+                              <Font name="Arial" size="12.0" />
+                           </font>
+                        </TextField>
+                        <HBox layoutX="23.0" layoutY="10.0" prefHeight="30.0" prefWidth="219.0">
+                           <children>
+                              <Label prefHeight="30.0" prefWidth="255.0" text="Chat Section">
+                                 <font>
+                                    <Font name="Arial" size="18.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="275.0" minHeight="510.0" minWidth="575.0" prefHeight="510.0" prefWidth="575.0" style="-fx-border-color: transparent gray transparent transparent;">
+                     <children>
+                        <AnchorPane prefHeight="50.0" prefWidth="575.0" style="-fx-border-color: transparent transparent #808080 transparent;">
+                           <children>
+                              <Label fx:id="interactor_name" layoutX="64.0" layoutY="15.0">
+                                 <font>
+                                    <Font name="Arial" size="16.0" />
+                                 </font>
+                              </Label>
+                              <Rectangle fx:id="interactor_avata" arcHeight="10.0" arcWidth="10.0" fill="LIGHTGRAY" height="35.0" layoutX="14.0" layoutY="8.0" stroke="BLACK" strokeType="INSIDE" style="-fx-stroke: transparent;" width="35.0" />
+                           </children>
+                        </AnchorPane>
+                        <ListView fx:id="list_message" layoutX="1.0" layoutY="51.0" prefHeight="409.0" prefWidth="574.0" styleClass="list_message" stylesheets="@../css/InterfaceClient.css" />
+                        <AnchorPane layoutY="459.0" prefHeight="50.0" prefWidth="575.0" style="-fx-border-color: gray transparent transparent transparent;">
+                           <children>
+                              <HBox layoutX="14.0" layoutY="10.0" prefHeight="30.0" prefWidth="105.0" spacing="5.0">
+                                 <children>
+                                    <Button fx:id="openFile" mnemonicParsing="false" prefHeight="25.0" prefWidth="45.0" styleClass="button_msg_bottom" stylesheets="@../css/InterfaceClient.css">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0">
+                                             <image>
+                                                <Image url="@../images/InterfaceClient/file.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                    <Button fx:id="openImage" mnemonicParsing="false" prefHeight="25.0" prefWidth="45.0" style="-fx-background-radius: 3px;" styleClass="button_msg_bottom" stylesheets="@../css/InterfaceClient.css">
+                                       <graphic>
+                                          <ImageView fitHeight="25.0" fitWidth="25.0">
+                                             <image>
+                                                <Image url="@../images/InterfaceClient/image.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                              <Button fx:id="btn_like" layoutX="510.0" layoutY="10.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="45.0" styleClass="button_msg_bottom" stylesheets="@../css/InterfaceClient.css">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../images/InterfaceClient/like.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <HBox layoutX="140.0" layoutY="10.0" prefHeight="30.0" prefWidth="360.0" style="-fx-background-radius: 5px; -fx-background-color: #dcdcdc;">
+                                 <children>
+                                    <TextField fx:id="input_message" prefHeight="30.0" prefWidth="320.0" promptText="\@Message" style="-fx-background-color: transparent;">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </TextField>
+                                    <Button fx:id="button_emjs" mnemonicParsing="false" prefHeight="30.0" style="-fx-background-color: transparent;">
+                                       <graphic>
+                                          <ImageView fitHeight="17.0" fitWidth="17.0">
+                                             <image>
+                                                <Image url="@../images/InterfaceClient/Emoji.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="a_display_file" layoutX="38.0" layoutY="390.0" prefHeight="60.0" prefWidth="500.0" style="-fx-border-color: gray; -fx-background-color: white; -fx-border-radius: 3px; -fx-background-radius: 3px 3px 0 0;" visible="false">
+                           <children>
+                              <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="45.0" layoutY="14.0">
+                                 <image>
+                                    <Image url="@../images/InterfaceClient/File2.png" />
+                                 </image>
+                              </ImageView>
+                              <Label fx:id="file_name_sd_f" layoutX="90.0" layoutY="14.0" prefHeight="16.0" prefWidth="150.0" text="File.txt">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                              <Label fx:id="file_size_sd_f" layoutX="90.0" layoutY="32.0" maxWidth="150.0" text="23Kb">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Label>
+                              <HBox layoutX="315.0" layoutY="19.0" prefHeight="27.0" prefWidth="150.0" spacing="10.0">
+                                 <children>
+                                    <Button fx:id="cancel" mnemonicParsing="false" prefHeight="27.0" prefWidth="70.0" styleClass="button_cancel_file" stylesheets="@../css/InterfaceClient.css" text="Cancel" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Button>
+                                    <Button fx:id="send" mnemonicParsing="false" prefHeight="27.0" prefWidth="70.0" styleClass="button_send" stylesheets="@../css/InterfaceClient.css" text="Send" textAlignment="JUSTIFY">
+                                       <font>
+                                          <Font name="Arial" size="12.0" />
+                                       </font>
+                                    </Button>
+                                 </children>
+                              </HBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="a_download" layoutX="63.0" layoutY="400.0" prefHeight="50.0" prefWidth="450.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 3px; -fx-background-radius: 3px;" visible="false">
+                           <children>
+                              <ProgressBar fx:id="progress_dowloading" layoutX="14.0" layoutY="16.0" prefHeight="20.0" prefWidth="200.0" progress="0.0" />
+                              <Label fx:id="result_download" layoutX="236.0" layoutY="17.0" maxWidth="200.0" prefHeight="17.0" prefWidth="200.0" style="-fx-font-family: Arial;" />
+                           </children>
+                        </AnchorPane>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane layoutX="850.0" prefHeight="509.0" prefWidth="249.0" style="-fx-background-color: white; -fx-background-radius: 0 0 7px 0;">
+                     <children>
+                        <Label fx:id="name_inteact_detail" layoutX="113.0" layoutY="30.0" prefHeight="21.0" prefWidth="126.0">
+                           <font>
+                              <Font name="Arial" size="15.0" />
+                           </font>
+                        </Label>
+                        <Rectangle fx:id="avata_detail" arcHeight="15.0" arcWidth="15.0" fill="GAINSBORO" height="75.0" layoutX="20.0" layoutY="30.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="75.0" />
+                        <Label fx:id="relationship_detail" layoutX="113.0" layoutY="52.0" prefHeight="21.0" prefWidth="105.0">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_emojis" layoutX="740.0" layoutY="304.0" prefHeight="251.0" prefWidth="237.0" style="-fx-background-color: white; -fx-border-color: gray; -fx-border-radius: 3px;" visible="false">
+               <children>
+                  <GridPane layoutX="20.0" layoutY="55.0" prefHeight="150.0" prefWidth="150.0" style="-fx-hgap: 2px; -fx-vgap: 2px;">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                      <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                      <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                     <children>
+                        <Button fx:id="btn_happy" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" styleClass="button_emoji" stylesheets="@../css/InterfaceClient.css">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/Emoji/Smile.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_love" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" styleClass="button_emoji" stylesheets="@../css/InterfaceClient.css" GridPane.columnIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/Emoji/Love.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_confused" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" styleClass="button_emoji" stylesheets="@../css/InterfaceClient.css" GridPane.columnIndex="2">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/Emoji/Confused.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_sad" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" styleClass="button_emoji" stylesheets="@../css/InterfaceClient.css" GridPane.columnIndex="3">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/Emoji/Sad.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                        <Button fx:id="btn_smile" mnemonicParsing="false" prefHeight="41.0" prefWidth="53.0" styleClass="button_emoji" stylesheets="@../css/InterfaceClient.css" GridPane.rowIndex="1">
+                           <graphic>
+                              <ImageView fitHeight="25.0" fitWidth="25.0">
+                                 <image>
+                                    <Image url="@../images/Emoji/Happy.png" />
+                                 </image>
+                              </ImageView>
+                           </graphic>
+                        </Button>
+                     </children>
+                  </GridPane>
+                  <Label layoutX="20.0" layoutY="14.0" text="Emoji">
+                     <font>
+                        <Font name="Arial" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_inforclient" layoutY="90.0" prefHeight="500.0" prefWidth="1100.0" visible="false">
+               <children>
+                  <AnchorPane fx:id="a_clientinfor2" prefHeight="510.0" prefWidth="1100.0" styleClass="anchorpane_center" stylesheets="@../css/InterfaceClient.css">
+                     <children>
+                        <VBox layoutX="30.0" layoutY="50.0" prefHeight="150.0" prefWidth="237.0" spacing="10.0" style="-fx-alignment: top_center;">
+                           <children>
+                              <Button fx:id="basic_information" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" style="-fx-background-color: #dcdcdc; -fx-background-radius: 5px;" styleClass="button_left_center" stylesheets="@../css/InterfaceClient.css" text="Basic Information">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../images/account.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="contact_information" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" styleClass="button_left_center" stylesheets="@../css/InterfaceClient.css" text="Contact Information">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../images/InterfaceClient/ContactInformation.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                              <Button fx:id="login_information" mnemonicParsing="false" prefHeight="37.0" prefWidth="200.0" styleClass="button_left_center" stylesheets="@../css/InterfaceClient.css" text="Login Information">
+                                 <font>
+                                    <Font name="Arial" size="14.0" />
+                                 </font>
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../images/InterfaceClient/LoginInformation.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                              </Button>
+                           </children>
+                        </VBox>
+                        <AnchorPane fx:id="a_contact_information" layoutX="300.0" layoutY="50.0" minHeight="362.0" minWidth="700.0" prefHeight="370.0" prefWidth="700.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px;" visible="false">
+                           <children>
+                              <VBox layoutX="3.0" layoutY="3.0" prefHeight="370.0" prefWidth="700.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="59.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                       <children>
+                                          <HBox prefHeight="59.0" prefWidth="660.0">
+                                             <children>
+                                                <VBox prefHeight="59.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <Label prefHeight="17.0" text="Contact Information">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="284.0" prefWidth="696.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Email">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="email_if" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Phone Number">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="phonenumber_if" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="a_basic_information" layoutX="300.0" layoutY="50.0" minHeight="362.0" minWidth="700.0" prefHeight="370.0" prefWidth="700.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px;">
+                           <children>
+                              <VBox layoutX="3.0" layoutY="3.0" prefHeight="370.0" prefWidth="700.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="59.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                       <children>
+                                          <HBox prefHeight="59.0" prefWidth="660.0">
+                                             <children>
+                                                <VBox prefHeight="59.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <Label prefHeight="17.0" text="Basic Information">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="284.0" prefWidth="696.0">
+                                       <children>
+                                          <HBox prefHeight="80.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="45.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent; -fx-alignment: center;">
+                                                   <children>
+                                                      <Label prefHeight="104.0" prefWidth="190.0" text="Avata">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label prefHeight="78.0" prefWidth="414.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Rectangle fx:id="avata" arcHeight="15.0" arcWidth="15.0" fill="WHITE" height="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="54.0" />
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Full name">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="full_name" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="change_fullname" mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Day of Birth">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="dob" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="change_dob" mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Gender">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="gender" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button fx:id="change_gender" mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                              <Button fx:id="change_avata" layoutX="625.0" layoutY="108.0" maxHeight="18.0" minHeight="20.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="54.0" style="-fx-background-color: rgba(220, 220, 220, 0.85); -fx-background-radius: 0 0 8px 8px;">
+                                 <graphic>
+                                    <ImageView fitHeight="20.0" fitWidth="20.0">
+                                       <image>
+                                          <Image url="@../images/InterfaceClient/Camera.png" />
+                                       </image>
+                                    </ImageView>
+                                 </graphic>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </AnchorPane>
+                        <AnchorPane fx:id="a_login_information" layoutX="300.0" layoutY="50.0" minHeight="362.0" minWidth="700.0" prefHeight="370.0" prefWidth="700.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px;" visible="false">
+                           <children>
+                              <VBox layoutX="3.0" layoutY="3.0" prefHeight="370.0" prefWidth="700.0" spacing="10.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                                 <children>
+                                    <HBox prefHeight="59.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                       <children>
+                                          <HBox prefHeight="59.0" prefWidth="660.0">
+                                             <children>
+                                                <VBox prefHeight="59.0" style="-fx-alignment: center;">
+                                                   <children>
+                                                      <Label prefHeight="17.0" text="Login Information">
+                                                         <font>
+                                                            <Font name="Arial" size="18.0" />
+                                                         </font>
+                                                      </Label>
+                                                   </children>
+                                                </VBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </HBox>
+                                    <VBox prefHeight="284.0" prefWidth="696.0">
+                                       <children>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Username">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="username_if" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                          <HBox prefHeight="50.0" prefWidth="698.0" style="-fx-alignment: center;">
+                                             <children>
+                                                <HBox prefHeight="50.0" prefWidth="660.0" style="-fx-border-color: transparent transparent gray transparent;">
+                                                   <children>
+                                                      <Label prefHeight="50.0" prefWidth="190.0" text="Password">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Label fx:id="password_if" prefHeight="50.0" prefWidth="429.0">
+                                                         <font>
+                                                            <Font name="Arial" size="15.0" />
+                                                         </font>
+                                                      </Label>
+                                                      <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="40.0" style="-fx-background-color: transparent;" stylesheets="@../css/InterfaceClient.css">
+                                                         <graphic>
+                                                            <ImageView fitHeight="15.0" fitWidth="15.0">
+                                                               <image>
+                                                                  <Image url="@../images/Chage.png" />
+                                                               </image>
+                                                            </ImageView>
+                                                         </graphic>
+                                                         <cursor>
+                                                            <Cursor fx:constant="HAND" />
+                                                         </cursor>
+                                                      </Button>
+                                                   </children>
+                                                </HBox>
+                                             </children>
+                                          </HBox>
+                                       </children>
+                                    </VBox>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </AnchorPane>
+                        <HBox layoutX="800.0" layoutY="440.0" prefHeight="30.0" prefWidth="200.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btn_cancel_outside" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" styleClass="button_cancel" stylesheets="@../css/InterfaceClient.css" text="Cancel">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_save" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" styleClass="button_save" stylesheets="@../css/InterfaceClient.css" text="Save">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane fx:id="a_change" layoutX="425.0" layoutY="95.0" prefHeight="320.0" prefWidth="250.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 50, 0, 0, 0);" visible="false">
+                     <children>
+                        <ComboBox fx:id="gender_input" layoutX="20.0" layoutY="65.0" prefHeight="30.0" prefWidth="180.0" promptText="Gender" style="-fx-font-family: Arial; -fx-background-color: #dcdcdc; -fx-background-radius: 3px;" visible="false" />
+                        <DatePicker fx:id="day_of_birth_input" layoutX="20.0" layoutY="60.0" prefHeight="30.0" prefWidth="180.0" style="-fx-font-family: Arial; -fx-background-radius: 3px;" visible="false" />
+                        <Label fx:id="name_pp" layoutX="20.0" layoutY="25.0" style="-fx-font-family: Arial;" text="Full name">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="input_tf" layoutX="20.0" layoutY="60.0" prefHeight="30.0" prefWidth="180.0" style="-fx-background-color: #d3d3d3; -fx-font-family: Arial;" visible="false">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                        <HBox layoutX="116.0" layoutY="279.0" prefHeight="27.0" prefWidth="120.0" spacing="10.0">
+                           <children>
+                              <Button fx:id="btn_cancel" mnemonicParsing="false" prefHeight="27.0" prefWidth="55.0" styleClass="button_cancel" stylesheets="@../css/InterfaceClient.css" text="Cancel">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                              </Button>
+                              <Button fx:id="btn_apply" disable="true" mnemonicParsing="false" prefHeight="27.0" prefWidth="55.0" style="-fx-background-color: #6495ed;" stylesheets="@../css/InterfaceClient.css" text="Apply">
+                                 <font>
+                                    <Font name="Arial" size="12.0" />
+                                 </font>
+                                 <cursor>
+                                    <Cursor fx:constant="HAND" />
+                                 </cursor>
+                              </Button>
+                           </children>
+                        </HBox>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_notification" layoutX="620.0" layoutY="100.0" prefHeight="300.0" prefWidth="450.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 10, 0, 0, 0);" visible="false">
+         <children>
+            <ListView fx:id="list_request" layoutX="14.0" layoutY="45.0" prefHeight="240.0" prefWidth="410.0" style="-fx-background-color: transparent;" styleClass="list_request_add_contact" stylesheets="@../css/InterfaceClient.css" />
+            <Label layoutX="14.0" layoutY="14.0" text="Notification">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <HBox layoutX="264.0" layoutY="11.0" prefHeight="27.0" prefWidth="160.0" spacing="10.0">
+               <children>
+                  <Button fx:id="request_1" mnemonicParsing="false" onAction="#request" prefHeight="27.0" prefWidth="75.0" style="-fx-background-color: white;" styleClass="button_nf_top_right" stylesheets="@../css/InterfaceClient.css" text="Request">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="feedback" mnemonicParsing="false" onAction="#feedback" prefHeight="27.0" prefWidth="75.0" styleClass="button_nf_top_right" stylesheets="@../css/InterfaceClient.css" text="FeedBack">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <Button layoutX="205.0" layoutY="10.0" maxHeight="30.0" minHeight="30.0" mnemonicParsing="false" onAction="#resetNotification" prefHeight="30.0" prefWidth="40.0" styleClass="button_reset" stylesheets="@../css/InterfaceClient.css">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../images/Project/ResetBlack.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <ListView fx:id="list_feedback" layoutX="14.0" layoutY="45.0" prefHeight="240.0" prefWidth="410.0" style="-fx-background-color: transparent;" styleClass="list_feedback" stylesheets="@../css/InterfaceClient.css" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_feedback" layoutX="375.0" layoutY="60.0" prefHeight="450.0" prefWidth="350.0" style="-fx-background-color: white; -fx-background-radius: 7px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);" visible="false">
+         <children>
+            <Label layoutX="14.0" layoutY="14.0" text="FeedBack">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <VBox layoutX="25.0" layoutY="60.0" prefHeight="350.0" prefWidth="300.0" spacing="10.0">
+               <children>
+                  <HBox prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: transparent transparent gray transparent;">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="150.0" text="Name Project">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="project_name" prefHeight="37.0" prefWidth="150.0">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: transparent transparent gray transparent;">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="150.0" text="Task">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="task_name" prefHeight="37.0" prefWidth="150.0" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: transparent transparent gray transparent;">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="150.0" text="Responder">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="responder" prefHeight="37.0" prefWidth="150.0" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="125.0" prefWidth="300.0" style="-fx-border-color: transparent transparent gray transparent;">
+                     <children>
+                        <Label prefHeight="11.0" prefWidth="150.0" text="FeedBack">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <VBox prefHeight="80.0" prefWidth="150.0">
+                           <children>
+                              <TextArea fx:id="feedback_data" disable="true" prefHeight="115.0" prefWidth="150.0" text="&#10;&#10;" wrapText="true">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </TextArea>
+                           </children>
+                        </VBox>
+                     </children>
+                  </HBox>
+                  <HBox prefHeight="30.0" prefWidth="300.0" style="-fx-border-color: transparent transparent gray transparent;">
+                     <children>
+                        <Label prefHeight="37.0" prefWidth="150.0" text="Response date">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="response_date" prefHeight="37.0" prefWidth="150.0" wrapText="true">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Button layoutX="310.0" layoutY="10.0" mnemonicParsing="false" onAction="#closeFeedBack" styleClass="button_close_on_result_search" stylesheets="@../css/InterfaceClient.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../images/Close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_contact" layoutX="325.0" layoutY="44.0" prefHeight="500.0" prefWidth="425.0" style="-fx-background-radius: 7px; -fx-background-color: #f5f5f5; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);" visible="false">
+         <children>
+            <Button fx:id="btn_close_acontact" layoutX="385.0" layoutY="10.0" mnemonicParsing="false" styleClass="button_close_on_result_search" stylesheets="@../css/InterfaceClient.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../images/Close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <Label layoutX="25.0" layoutY="15.0" text="Contacts">
+               <font>
+                  <Font name="Arial" size="16.0" />
+               </font>
+            </Label>
+            <ListView fx:id="list_contact" layoutX="20.0" layoutY="100.0" prefHeight="380.0" prefWidth="385.0" styleClass="list_contact" stylesheets="@../css/InterfaceClient.css" />
+            <HBox layoutX="185.0" layoutY="54.0" prefHeight="27.0" prefWidth="220.0" spacing="10.0">
+               <children>
+                  <Button fx:id="contact_list" mnemonicParsing="false" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: #dcdcdc;" text="Contacts" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="invitation" mnemonicParsing="false" prefHeight="27.0" prefWidth="70.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Invitation" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="find" mnemonicParsing="false" prefHeight="27.0" prefWidth="60.0" style="-fx-background-color: transparent; -fx-border-color: transparent;" text="Find" textAlignment="JUSTIFY">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </HBox>
+            <AnchorPane fx:id="a_search" layoutX="20.0" layoutY="100.0" prefHeight="365.0" prefWidth="385.0" style="-fx-border-radius: 7px; -fx-background-color: white; -fx-background-radius: 7px;" visible="false">
+               <children>
+                  <TextField fx:id="email_search" layoutX="14.0" layoutY="55.0" prefHeight="27.0" prefWidth="250.0" promptText=" Example@gmail.com" style="-fx-background-color: #d3d3d3;">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font></TextField>
+                  <Label layoutX="16.0" layoutY="19.0" text="Search">
+                     <font>
+                        <Font name="Arial" size="16.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+            <TextField layoutX="20.0" layoutY="55.0" prefHeight="27.0" prefWidth="150.0" promptText="Search" style="-fx-background-color: #d3d3d3;">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_client_profile" layoutX="400.0" layoutY="100.0" prefHeight="400.0" prefWidth="300.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px; -fx-border-radius: 7px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);" visible="false">
+         <children>
+            <Label fx:id="client_name_search" layoutX="41.0" layoutY="160.0" prefHeight="21.0" prefWidth="219.0" style="-fx-alignment: center;" text="Võ Quốc Khang">
+               <font>
+                  <Font name="Arial" size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="client_gender_search" layoutX="137.0" layoutY="192.0" text="Male">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <Button layoutX="256.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeProfile" styleClass="button_close_on_result_search" stylesheets="@../css/InterfaceClient.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../images/Close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <VBox layoutX="79.0" layoutY="240.0" prefHeight="130.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <Button fx:id="addFriend" mnemonicParsing="false" onAction="#addFriend" prefHeight="30.0" prefWidth="150.0" styleClass="button_on_result_search" stylesheets="@../css/InterfaceClient.css" text="Add Friend">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#message" prefHeight="30.0" prefWidth="150.0" styleClass="button_on_result_search" stylesheets="@../css/InterfaceClient.css" text="Message">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Rectangle fx:id="avata_profile" arcHeight="15.0" arcWidth="15.0" fill="GAINSBORO" height="80.0" layoutX="113.0" layoutY="60.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="80.0" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_confirm_delete_project" layoutX="420.0" layoutY="163.0" prefHeight="275.0" prefWidth="400.0" style="-fx-background-color: #f5f5f5; -fx-background-radius: 7px; -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.5), 20, 0, 0, 0);" visible="false">
+         <children>
+            <Button layoutX="356.0" layoutY="14.0" mnemonicParsing="false" onAction="#closeDelete" styleClass="button_close_on_result_search" stylesheets="@../css/InterfaceClient.css">
+               <graphic>
+                  <ImageView fitHeight="20.0" fitWidth="20.0">
+                     <image>
+                        <Image url="@../images/Close.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </Button>
+            <AnchorPane fx:id="a_delete_last" layoutX="50.0" layoutY="44.0" prefHeight="200.0" prefWidth="300.0" style="-fx-background-color: #f5f5f5;" visible="false">
+               <children>
+                  <VBox layoutY="10.0" maxHeight="150.0" prefHeight="140.0" prefWidth="300.0" spacing="20.0">
+                     <children>
+                        <Label fx:id="notification_send_code" style="-fx-font-family: Arial; -fx-alignment: center;" text="Enter the confirmation code sent to trieuunv@gmail.com" wrapText="true">
+                           <font>
+                              <Font size="16.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="input_code" maxWidth="150.0" prefHeight="25.0" prefWidth="225.0" style="-fx-background-color: #dcdcdc; -fx-font-family: Arial;" />
+                     </children>
+                  </VBox>
+                  <Button layoutX="1.0" layoutY="160.0" mnemonicParsing="false" onAction="#finishDelete" prefHeight="27.0" prefWidth="75.0" style="-fx-font-family: Arial; -fx-background-color: #d3d3d3; -fx-border-color: gray; -fx-background-insets: 0px; -fx-border-radius: 3px;" text="Delete" />
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_delete_first" layoutX="50.0" layoutY="44.0" prefHeight="200.0" prefWidth="300.0">
+               <children>
+                  <VBox prefHeight="200.0" prefWidth="300.0" spacing="50.0" style="-fx-alignment: center;">
+                     <children>
+                        <Label fx:id="notification_confirm" minHeight="40.0" prefHeight="40.0" prefWidth="306.0" style="-fx-font-family: Arial; -fx-alignment: center; -fx-text-alignment: center;" text="Delete AAAAAAAAABBCC CCCCC CCCCCCBBBBBBBBBB ?" wrapText="true">
+                           <font>
+                              <Font size="15.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="30.0" prefWidth="200.0" style="-fx-alignment: center;">
+                           <children>
+                              <HBox maxHeight="30.0" prefHeight="30.0" prefWidth="150.0" spacing="10.0">
+                                 <children>
+                                    <Button mnemonicParsing="false" onAction="#closeDelete" prefHeight="30.0" prefWidth="70.0" style="-fx-font-family: Arial; -fx-background-color: #d3d3d3;" text="Cancel" />
+                                    <Button mnemonicParsing="false" onAction="#confirmDeletion" prefHeight="30.0" prefWidth="70.0" style="-fx-font-family: Arial; -fx-background-color: #6495ed;" text="Ok" />
+                                 </children>
+                              </HBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

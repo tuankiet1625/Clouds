@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="450.0" style="-fx-background-radius: 7px;" styleClass="anchorpane_main" stylesheets="@../css/NewProject.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.NewProjectControler">
+   <children>
+      <AnchorPane maxHeight="35.0" minHeight="40.0" minWidth="450.0" prefHeight="40.0" prefWidth="450.0" styleClass="anchorpane_top" stylesheets="@../css/NewProject.css">
+         <children>
+            <Label layoutX="49.0" layoutY="12.0" prefWidth="106.0" text="New Project" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="15.0" />
+               </font>
+            </Label>
+            <HBox layoutX="405.0" prefHeight="33.0" prefWidth="40.0">
+               <children>
+                  <Button maxHeight="35.0" mnemonicParsing="false" onAction="#close" prefHeight="35.0" styleClass="button_close" stylesheets="@../css/NewProject.css">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../images/Project/Close.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="14.0" layoutY="5.0">
+               <image>
+                  <Image url="@../images/NewProject/Folder.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutY="40.0" prefHeight="460.0" prefWidth="450.0" styleClass="anchorpane_mid" stylesheets="@../css/CreateProject.css">
+         <children>
+            <VBox layoutX="50.0" layoutY="20.0" prefHeight="395.0" prefWidth="350.0" spacing="15.0">
+               <children>
+                  <VBox prefHeight="50.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <Label text="Name project">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="name_project" prefHeight="29.0" prefWidth="350.0" style="-fx-font-family: Arial;" styleClass="input" stylesheets="@../css/NewProject.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="120.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <Label text="Describe">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextArea fx:id="describe" prefHeight="200.0" prefWidth="200.0" styleClass="input" stylesheets="@../css/NewProject.css" />
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="48.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <Label text="End date">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <HBox prefHeight="27.0" prefWidth="350.0">
+                           <children>
+                              <DatePicker fx:id="end_date" prefHeight="27.0" prefWidth="180.0" styleClass="date_picker" stylesheets="@../css/NewProject.css" />
+                              <Label fx:id="start_date" prefHeight="27.0" prefWidth="170.0" style="-fx-font-style: italic;" text="     Start day: 12/3/2024">
+                                 <font>
+                                    <Font name="Arial" size="13.0" />
+                                 </font>
+                              </Label>
+                           </children>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <VBox prefHeight="48.0" prefWidth="350.0" spacing="5.0">
+                     <children>
+                        <Label text="Budget">
+                           <font>
+                              <Font name="Arial" size="13.0" />
+                           </font>
+                        </Label>
+                        <TextField fx:id="budget" maxWidth="180.0" prefHeight="27.0" prefWidth="180.0" styleClass="input" stylesheets="@../css/NewProject.css">
+                           <font>
+                              <Font size="13.0" />
+                           </font>
+                        </TextField>
+                     </children>
+                  </VBox>
+               </children>
+            </VBox>
+            <HBox layoutX="286.0" layoutY="415.0" prefHeight="27.0" prefWidth="150.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#close" prefHeight="27.0" prefWidth="70.0" styleClass="button_cancel" stylesheets="@../css/NewProject.css" text="Cancel" />
+                  <Button mnemonicParsing="false" onAction="#finish" prefHeight="27.0" prefWidth="70.0" styleClass="button_finish" stylesheets="@../css/NewProject.css" text="Finish" />
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

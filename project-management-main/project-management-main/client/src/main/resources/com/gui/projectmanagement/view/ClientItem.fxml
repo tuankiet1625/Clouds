@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+
+<AnchorPane prefHeight="70.0" prefWidth="330.0" style="-fx-background-color: white; -fx-background-radius: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.view.ClientItem">
+   <children>
+      <Circle fill="DODGERBLUE" layoutX="34.0" layoutY="35.0" radius="20.0" stroke="BLACK" strokeType="INSIDE" />
+      <Label layoutX="66.0" layoutY="27.0" prefWidth="106.0" text="Nguyễn Triều">
+         <font>
+            <Font name="Arial" size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

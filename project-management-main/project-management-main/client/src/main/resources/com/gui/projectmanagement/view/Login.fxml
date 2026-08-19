@@ -1,0 +1,373 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.PasswordField?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="900.0" styleClass="anchorpane_right" stylesheets="@../css/Login.css" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.LoginController">
+   <children>
+      <Rectangle fx:id="background" arcHeight="20.0" arcWidth="20.0" fill="WHITE" height="500.0" layoutX="240.0" stroke="WHITE" strokeType="INSIDE" strokeWidth="0.0" width="660.0" />
+      <AnchorPane fx:id="anchorpane_login" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css">
+         <children>
+            <Label layoutX="91.0" layoutY="65.0" prefHeight="30.0" prefWidth="68.0" text="LOG IN">
+               <font>
+                  <Font name="Arial" size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="25.0" layoutY="120.0" prefHeight="80.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="username_login" prefHeight="35.0" prefWidth="200.0" promptText="Username" styleClass="text_field" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <HBox fx:id="hbox_password_login" prefHeight="35.0" prefWidth="200.0" styleClass="hbox_password" stylesheets="@../css/Login.css">
+                     <children>
+                        <PasswordField fx:id="password_login" prefHeight="31.0" prefWidth="170.0" promptText="Password" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <HBox fx:id="hbox_contain_btneye" maxHeight="25.0" prefHeight="15.0" prefWidth="28.0" styleClass="hobox_eye" stylesheets="@../css/Login.css">
+                           <children>
+                              <VBox prefHeight="33.0" prefWidth="20.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Button fx:id="btn_eye" mnemonicParsing="false" onAction="#showPassword" prefHeight="20.0" prefWidth="20.0" styleClass="button_eye" stylesheets="@../css/Login.css" visible="false">
+                                       <graphic>
+                                          <ImageView fx:id="eye_password">
+                                             <image>
+                                                <Image url="@../images/EyeClose.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox layoutX="25.0" layoutY="257.0" prefHeight="80.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#login" prefHeight="35.0" prefWidth="200.0" styleClass="button_login" stylesheets="@../css/Login.css" text="Log In">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#regester" prefHeight="35.0" prefWidth="200.0" styleClass="button_regester" stylesheets="@../css/Login.css" text="Regester">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </VBox>
+            <Hyperlink layoutX="122.0" layoutY="205.0" onAction="#forgotPassword" prefHeight="23.0" prefWidth="109.0" text="Forgot password?">
+               <font>
+                  <Font name="Arial" size="12.0" />
+               </font>
+            </Hyperlink>
+            <TextField fx:id="password_show_login" layoutX="26.0" layoutY="167.0" prefHeight="31.0" prefWidth="170.0" promptText="Password" styleClass="text_field_password" stylesheets="@../css/Login.css" visible="false">
+               <font>
+                  <Font size="14.0" />
+               </font>
+            </TextField>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_regester1" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+         <children>
+            <Label layoutX="80.0" layoutY="95.0" text="REGESTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="25.0" layoutY="150.0" prefHeight="170.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="first_name" prefHeight="35.0" prefWidth="200.0" promptText="First Name" styleClass="text_field" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <TextField fx:id="last_name" prefHeight="35.0" prefWidth="200.0" promptText="Last Name" styleClass="text_field" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <DatePicker fx:id="day_of_birth" prefHeight="35.0" prefWidth="200.0" promptText="Day of Birth" styleClass="date_picker" stylesheets="@../css/Login.css" />
+                  <ComboBox fx:id="gender" prefHeight="35.0" prefWidth="200.0" promptText="Gender" styleClass="combobox_gender" stylesheets="@../css/Login.css" />
+               </children>
+            </VBox>
+            <Label layoutX="25.0" layoutY="330.0" prefHeight="17.0" prefWidth="115.0" text="Personal information" />
+            <HBox layoutX="25.0" layoutY="436.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backToLogin" prefHeight="35.0" prefWidth="95.0" style="-fx-graphic-text-gap: 10px;" styleClass="button_login" stylesheets="@../css/Login.css" text="Login">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../images/Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToRegester2" prefHeight="35.0" prefWidth="95.0" styleClass="button_regester" stylesheets="@../css/Login.css" text="Next">
+                     <graphic>
+                        <ImageView fitHeight="20.0" fitWidth="20.0">
+                           <image>
+                              <Image url="@../images/Next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_regester2" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+         <children>
+            <Label layoutX="80.0" layoutY="95.0" text="REGESTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="25.0" layoutY="150.0" prefHeight="170.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="email" prefHeight="35.0" prefWidth="200.0" promptText="Email" styleClass="text_field" stylesheets="@../css/Login.css" />
+                  <TextField fx:id="phonenumber" prefHeight="35.0" prefWidth="200.0" promptText="Phone Number" styleClass="text_field" stylesheets="@../css/Login.css" />
+               </children>
+            </VBox>
+            <Label layoutX="25.0" layoutY="330.0" prefHeight="17.0" prefWidth="115.0" text="Contact information" />
+            <HBox layoutX="25.0" layoutY="436.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backToRegester1" prefHeight="35.0" prefWidth="95.0" styleClass="button_login" stylesheets="@../css/Login.css" text="Back">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToRegester3" prefHeight="35.0" prefWidth="95.0" styleClass="button_regester" stylesheets="@../css/Login.css" text="Next">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/Next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="25.0" layoutY="360.0" prefHeight="17.0" prefWidth="188.0" text="* Please use an existing email" textFill="RED" />
+            <Label layoutX="25.0" layoutY="377.0" prefHeight="17.0" prefWidth="188.0" text=" and phone number" textFill="RED" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="anchorpane_regester3" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+         <children>
+            <Label layoutX="80.0" layoutY="95.0" text="REGESTER">
+               <font>
+                  <Font size="20.0" />
+               </font>
+            </Label>
+            <VBox layoutX="25.0" layoutY="150.0" prefHeight="170.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <TextField fx:id="username_regester" prefHeight="35.0" prefWidth="200.0" promptText="Username" styleClass="text_field" stylesheets="@../css/Login.css" />
+                  <HBox fx:id="hbox_password_regester1" prefHeight="35.0" prefWidth="200.0" styleClass="hbox_password" stylesheets="@../css/Login.css">
+                     <children>
+                        <PasswordField fx:id="password_regester1" maxHeight="31.0" prefHeight="33.0" prefWidth="170.0" promptText="Password" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <HBox maxHeight="31.0" prefHeight="31.0" prefWidth="28.0">
+                           <children>
+                              <VBox prefHeight="35.0" prefWidth="20.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Button fx:id="btn_eye1" mnemonicParsing="false" onAction="#showPasswordRegester1" prefHeight="20.0" prefWidth="20.0" styleClass="button_eye" stylesheets="@../css/Login.css" visible="false">
+                                       <graphic>
+                                          <ImageView fx:id="eye_password_regester1">
+                                             <image>
+                                                <Image url="@../images/EyeClose.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+                  <HBox fx:id="hbox_password_regester2" prefHeight="35.0" prefWidth="200.0" styleClass="hbox_password" stylesheets="@../css/Login.css">
+                     <children>
+                        <PasswordField fx:id="password_regester2" maxHeight="31.0" prefHeight="31.0" prefWidth="170.0" promptText="Enter again password" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </PasswordField>
+                        <HBox maxHeight="31.0" prefHeight="31.0" prefWidth="28.0">
+                           <children>
+                              <VBox prefHeight="35.0" prefWidth="20.0" style="-fx-alignment: center;">
+                                 <children>
+                                    <Button fx:id="btn_eye2" mnemonicParsing="false" onAction="#showPasswordRegester2" prefHeight="20.0" prefWidth="20.0" styleClass="button_eye" stylesheets="@../css/Login.css" visible="false">
+                                       <graphic>
+                                          <ImageView fx:id="eye_password_regester2">
+                                             <image>
+                                                <Image url="@../images/EyeClose.png" />
+                                             </image>
+                                          </ImageView>
+                                       </graphic>
+                                    </Button>
+                                 </children>
+                              </VBox>
+                           </children>
+                        </HBox>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Label layoutX="25.0" layoutY="330.0" prefHeight="17.0" prefWidth="115.0" text="Security information" />
+            <HBox layoutX="25.0" layoutY="436.0" prefHeight="35.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button mnemonicParsing="false" onAction="#backToRegester2" prefHeight="35.0" prefWidth="95.0" styleClass="button_login" stylesheets="@../css/Login.css" text="Back">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/Back.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button mnemonicParsing="false" onAction="#goToAuthentication" prefHeight="35.0" prefWidth="95.0" styleClass="button_regester" stylesheets="@../css/Login.css" text="Next">
+                     <graphic>
+                        <ImageView>
+                           <image>
+                              <Image url="@../images/Next.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </HBox>
+            <Label layoutX="25.0" layoutY="360.0" prefHeight="17.0" prefWidth="200.0" text="* Username does not contain special" textFill="RED" />
+            <Label layoutX="25.0" layoutY="377.0" prefHeight="17.0" prefWidth="200.0" text="charactersl" textFill="RED" />
+            <Label layoutX="25.0" layoutY="394.0" prefHeight="17.0" prefWidth="200.0" text="* Password must be 8 characters or" textFill="RED" />
+            <Label layoutX="25.0" layoutY="411.0" prefHeight="17.0" prefWidth="200.0" text=" more" textFill="RED" />
+            <TextField fx:id="password_show_regester1" layoutX="26.0" layoutY="197.0" prefHeight="31.0" prefWidth="170.0" promptText="Password" styleClass="text_field_password" stylesheets="@../css/Login.css" visible="false" />
+            <TextField fx:id="password_show_regester2" layoutX="26.0" layoutY="242.0" prefHeight="31.0" prefWidth="170.0" promptText="Enter again password" styleClass="text_field_password" stylesheets="@../css/Login.css" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="a_forgot_password" maxWidth="250.0" minHeight="500.0" minWidth="250.0" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+         <children>
+            <AnchorPane fx:id="a_forgot_1" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+               <children>
+                  <Label layoutX="51.0" layoutY="45.0" prefHeight="30.0" text="Find Your Account">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="username_search" layoutX="40.0" layoutY="167.0" prefHeight="33.0" prefWidth="170.0" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="16.0" layoutY="94.0" maxWidth="220.0" prefWidth="220.0" style="-fx-text-alignment: center;" text="Please enter your username to search for your account" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="find" layoutX="78.0" layoutY="235.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" styleClass="button_save" stylesheets="@../css/InterfaceClient.css" text="Find">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_forgot_2" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+               <children>
+                  <Label layoutX="74.0" layoutY="45.0" prefHeight="30.0" text="Confirmation">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="code" layoutX="40.0" layoutY="177.0" prefHeight="33.0" prefWidth="170.0" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label fx:id="message" layoutX="16.0" layoutY="94.0" maxWidth="220.0" prefWidth="220.0" style="-fx-text-alignment: center;" text="Please enter the confirmation code sent to trieuunv@gmail.com" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="confirm" layoutX="78.0" layoutY="235.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #d3d3d3;" text="Confirm">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="a_forgot_3" prefHeight="500.0" prefWidth="250.0" styleClass="anhchorpane_left" stylesheets="@../css/Login.css" visible="false">
+               <children>
+                  <Label layoutX="102.0" layoutY="44.0" prefHeight="30.0" text="Finish">
+                     <font>
+                        <Font name="Arial" size="18.0" />
+                     </font>
+                  </Label>
+                  <TextField fx:id="new_password" layoutX="42.0" layoutY="134.0" prefHeight="33.0" prefWidth="170.0" styleClass="text_field_password" stylesheets="@../css/Login.css">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </TextField>
+                  <Label layoutX="16.0" layoutY="94.0" maxWidth="220.0" prefWidth="220.0" style="-fx-text-alignment: center; -fx-alignment: center;" text="Enter the password" wrapText="true">
+                     <font>
+                        <Font name="Arial" size="15.0" />
+                     </font>
+                  </Label>
+                  <Button fx:id="finish" layoutX="80.0" layoutY="250.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="95.0" style="-fx-background-color: #d3d3d3;" text="Finish">
+                     <font>
+                        <Font name="Arial" size="12.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button layoutX="50.0" layoutY="455.0" mnemonicParsing="false" prefHeight="26.0" prefWidth="150.0" style="-fx-font-family: Arial;" styleClass="button_login" stylesheets="@../css/Login.css" text="Log In">
+               <font>
+                  <Font name="Arial" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button layoutX="860.0" layoutY="10.0" mnemonicParsing="false" onAction="#close" prefHeight="30.0" prefWidth="30.0" styleClass="btn_close" stylesheets="@../css/Login.css">
+         <graphic>
+            <ImageView fitHeight="20.0" fitWidth="20.0">
+               <image>
+                  <Image url="@../images/Project/Close.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>

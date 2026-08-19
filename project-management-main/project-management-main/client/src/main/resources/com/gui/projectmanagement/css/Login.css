@@ -1,0 +1,158 @@
+.anhchorpane_left {
+    -fx-background-color: white ;
+    -fx-border-color: #808080 transparent #808080 #808080 ;
+    -fx-border-radius: 7px 0 0 7px;
+    -fx-background-radius: 7px 0 0 7px ;
+}
+
+.anchorpane_right {
+    -fx-background-color: transparent;
+}
+
+.text_field {
+    -fx-background-color: #d3d3d3 ;
+    -fx-background-radius: 3px ;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+}
+
+.text_field:focused {
+    -fx-background-color: #d3d3d3 ;
+    -fx-background-radius: 3px ;
+    -fx-font-size: 14px ;
+    -fx-border-color: black ;
+    -fx-border-radius: 3px;
+}
+
+.button_login {
+    -fx-background-color: #6495ed ;
+    -fx-background-radius: 3px ;
+    -fx-text-fill: white ;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+    -fx-graphic-text-gap: 10px ;
+}
+
+.button_regester {
+    -fx-background-radius: 3px ;
+    -fx-background-color: #d3d3d3 ;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+    -fx-graphic-text-gap: 10px ;
+}
+
+.button_login:hover {
+    -fx-background-color: #6495ed ;
+    -fx-background-radius: 3px ;
+    -fx-text-fill: white ;
+    -fx-font-size: 14px ;
+    -fx-cursor: hand ;
+}
+
+.button_regester:hover {
+    -fx-background-radius: 3px ;
+    -fx-background-color: #d3d3d3 ;
+    -fx-font-size: 14px ;
+    -fx-cursor: hand ;
+}
+
+/* Regester1 */
+
+.date_picker {
+    -fx-background-radius: 3px;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+}
+
+.date_picker:hover {
+    -fx-background-radius: 3px;
+    -fx-font-size: 14px ;
+    -fx-cursor: hand ;
+    -fx-font-family: Arial ;
+}
+
+.combobox_gender {
+    -fx-background-radius: 3px;
+    -fx-background-color: #d3d3d3 ;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+}
+
+.combobox_gender:hover {
+    -fx-background-radius: 3px;
+    -fx-background-color: #d3d3d3 ;
+    -fx-font-size: 14px ;
+    -fx-cursor: hand ;
+    -fx-font-family: Arial ;
+}
+
+.button_eye {
+    -fx-background-color: transparent ;
+    -fx-border-color: transparent;
+    -fx-min-width: 20px;
+    -fx-min-height: 20px;
+    -fx-max-width: 20px;
+    -fx-max-height: 20px;
+}
+
+.button_eye:hover {
+    -fx-border-color: transparent;
+    -fx-background-color: transparent ;
+    -fx-cursor: hand ;
+}
+
+.hbox_password {
+    -fx-background-color: #d3d3d3;
+    -fx-border-radius: 3px;
+    -fx-background-radius: 3px;
+    -fx-alignment: center ;
+}
+
+.text_field_password {
+    -fx-background-color: #d3d3d3;
+    -fx-background-radius: 3px;
+    -fx-font-size: 14px ;
+    -fx-font-family: Arial ;
+}
+
+.button_tmp {
+    -fx-background-color: transparent ;
+    -fx-min-width: 2px;
+    -fx-min-height: 2px;
+    -fx-max-width: 2px;
+    -fx-max-height: 2px;
+}
+
+.hobox_eye {
+    -fx-background-color: transparent ;
+    -fx-background-color:  transparent ;
+}
+
+.hobox_eye:focused {
+    -fx-background-color: transparent ;
+    -fx-background-color:  transparent ;
+}
+
+.btn_close {
+    -fx-background-color: transparent ;
+    -fx-max-width: 30px ;
+    -fx-max-height: 30px ;
+    -fx-min-width: 30px ;
+    -fx-min-height: 30px ;
+    -fx-background-radius: 50em ;
+    -fx-background-insets: 0px ;
+}
+
+.btn_close:hover {
+    -fx-background-color: #dcdcdc ;
+    -fx-max-width: 30px ;
+    -fx-max-height: 30px ;
+    -fx-min-width: 30px ;
+    -fx-min-height: 30px ;
+    -fx-cursor: hand ;
+    -fx-background-insets: 0px ;
+}
+
+
+
+

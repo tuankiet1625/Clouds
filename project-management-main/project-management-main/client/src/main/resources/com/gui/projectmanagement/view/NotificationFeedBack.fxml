@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="95.0" prefWidth="390.0" style="-fx-background-color: white; -fx-background-radius: 7px;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.gui.projectmanagement.controller.FeedBackItem">
+    <children>
+        <Label fx:id="notification" layoutX="72.0" layoutY="12.0" prefHeight="50.0" prefWidth="285.0" style="-fx-alignment: TOP_LEFT;" wrapText="true">
+            <font>
+                <Font name="Arial" size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="72.0" layoutY="62.0" style="-fx-alignment: TOP_LEFT;" text="Project:" wrapText="true">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+        <Label fx:id="project_name" layoutX="123.0" layoutY="62.0" prefHeight="16.0" prefWidth="250.0" style="-fx-alignment: TOP_LEFT;" text="Cấu trúc dữ liệu và giải thuật" wrapText="true">
+            <font>
+                <Font name="Arial" size="14.0" />
+            </font>
+        </Label>
+      <Rectangle fx:id="avata" arcHeight="15.0" arcWidth="15.0" fill="LIGHTGRAY" height="46.0" layoutX="14.0" layoutY="14.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="46.0" />
+    </children>
+</AnchorPane>

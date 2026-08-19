@@ -1,0 +1,90 @@
+.anchorpane_main {
+    -fx-background-color: white  ;
+}
+
+.anchorpane_top {
+    -fx-background-radius: 7px 7px 0 0 ;
+    -fx-background-color: #6495ed ;
+}
+
+.anchorpane_mid {
+    -fx-border-color: transparent #808080 #808080 #808080;
+    -fx-background-radius: 0 0  7px  7px;
+    -fx-border-radius: 0 0 7px  7px;
+}
+
+.button_close {
+    -fx-min-width: 45px;
+    -fx-min-height: 40px;
+    -fx-max-width: 45px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 0px;
+    -fx-background-insets: 0px;
+    -fx-background-color: transparent;
+}
+
+.button_close:hover {
+    -fx-min-width: 45px;
+    -fx-min-height: 40px;
+    -fx-max-width: 45px;
+    -fx-max-height: 40px;
+    -fx-background-radius: 0 7px 0 0 ;
+    -fx-background-insets: 0px;
+    -fx-background-color: #ff6347;
+    -fx-cursor: hand ;
+}
+
+.input {
+    -fx-background-color: white ;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px ;
+    -fx-border-color: #808080 ;
+    -fx-font-family: Arial ;
+}
+
+.date_picker {
+    -fx-background-color: transparent ;
+    -fx-background-radius: 3px;
+    -fx-border-color: #808080 ;
+    -fx-border-radius: 3px ;
+}
+
+.date_picker:hover {
+    -fx-background-radius: 3px;
+    -fx-cursor: hand;
+}
+
+.check_box .box{
+    -fx-background-color: white ;
+    -fx-background-radius: 3px;
+    -fx-border-radius: 3px;
+    -fx-border-color: #808080 ;
+
+}
+
+.button_finish {
+    -fx-background-color: #6495ed ;
+    -fx-background-insets: 0px;
+    -fx-background-radius: 3px ;
+}
+
+.button_finish:hover {
+    -fx-background-color: #0000ff ;
+    -fx-background-radius: 3px ;
+    -fx-background-insets: 0px;
+    -fx-cursor: hand ;
+}
+
+.button_cancel {
+    -fx-background-color: #d3d3d3 ;
+    -fx-background-insets: 0px;
+    -fx-background-radius: 3px ;
+}
+
+.button_cancel:hover {
+    -fx-background-radius: 3px ;
+    -fx-background-insets: 0px;
+}
+
+
+
